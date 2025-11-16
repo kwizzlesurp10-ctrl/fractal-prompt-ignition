@@ -1,0 +1,36 @@
+{
+  "seed": "Design an interactive AR game for urban foraging",
+  "roots": [
+    {
+      "step": 1,
+      "branch": "Establish core gameplay loop and player motivation",
+      "prompt": "Outline a reward-driven loop for discovering edible urban plants."
+    },
+    {
+      "step": 2,
+      "branch": "Core loop: Scan-Identify-Harvest progression",
+      "prompt": "Generate AR scan mechanics for real-time plant recognition via phone camera."
+    },
+    {
+      "step": 3,
+      "branch": "Identification layer: Educational facts and risks",
+      "prompt": "Create branching factoids on urban edibles like dandelions, with toxicity warnings."
+    },
+    {
+      "step": 4,
+      "branch": "Harvest mechanics: Virtual collection and real-world ties",
+      "prompt": "Design inventory system linking AR scans to sustainable foraging tips."
+    },
+    {
+      "step": 5,
+      "branch": "Social elements: Multiplayer hunts and community shares",
+      "prompt": "Brainstorm co-op modes for group forages with shared maps and leaderboards."
+    },
+    {
+      "step": 6,
+      "branch": "Monetization and progression: In-app ecosystem",
+      "prompt": "Sketch seasonal events and premium seed packs for deeper urban lore."
+    }
+  ],
+  "reconstructed": "Architect AR urban forage odyssey—scan, learn, hunt in symbiotic city wilds"
+}
