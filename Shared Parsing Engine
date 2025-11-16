@@ -1,0 +1,40 @@
+const pMemoize = require('p-memoize');
+const axios = require('axios'); // Proxy to AI APIs
+
+class ReverseParser {
+  constructor(seed, roots = []) {
+    this.seed = seed;
+    this.roots = roots;
+    this.memoizedDeconstruct = pMemoize(this._deconstruct.bind(this), { maxAge: 600000 });
+    this.memoizedReconstruct = pMemoize(this._reconstruct.bind(this), { maxAge: 600000 });
+  }
+
+  async _deconstruct(steps = 5) {
+    let current = this.seed;
+    const roots = [];
+    for (let i = 1; i <= steps; i++) {
+      const branch = await this._queryAI(`Deconstruct step ${i}: ${current} into sub-concepts.`); // e.g., Gemini call
+      roots.push({ step: i, branch: branch.concept, prompt: branch.prompt });
+      current = branch.concept; // Cascade downward
+    }
+    this.roots = roots;
+    return roots;
+  }
+
+  async _reconstruct() {
+    let synthesized = this.roots[this.roots.length - 1]?.branch || '';
+    for (let i = this.roots.length - 2; i >= 0; i--) {
+      const weave = await this._queryAI(`Synthesize upward: Integrate ${synthesized} into parent ${this.roots[i].branch}.`);
+      synthesized = weave.concept;
+    }
+    return synthesized; // Converges to seed
+  }
+
+  async _queryAI(prompt) {
+    // Proxy example: Gemini API
+    const { data } = await axios.post('https://api.gemini.com/v1/generate', { prompt }, { headers: { 'API-Key': process.env.GEMINI_KEY } });
+    return data; // { concept: '...', prompt: '...' }
+  }
+}
+
+module.exports = { ReverseParser };
