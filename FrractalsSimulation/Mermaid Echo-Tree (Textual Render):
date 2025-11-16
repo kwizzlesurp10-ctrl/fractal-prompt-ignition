@@ -1,0 +1,9 @@
+graph TD
+    S[🌱 Seed: Design interactive AR game for urban foraging] --> R1[Step 1: Core loop + motivation]
+    R1 --> R2[Step 2: Scan-Identify-Harvest progression]
+    R2 --> R3[Step 3: Educational facts + risks]
+    R3 --> R4[Step 4: Virtual collection + real ties]
+    R4 --> R5[Step 5: Multiplayer hunts + shares]
+    R5 --> R6[Step 6: Monetization + progression ecosystem]
+    style S fill:#90EE90
+    style R6 fill:#FFD700
