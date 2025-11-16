@@ -1,0 +1,26 @@
+{
+  "seed": "Craft a viral AI-generated meme campaign for eco-activism",
+  "roots": [
+    {
+      "step": 1,
+      "branch": "Define core message and target audience",
+      "prompt": "Generate a catchy eco-slogan for Gen Z activists."
+    },
+    {
+      "step": 2,
+      "branch": "Core message: Urgent call to reduce plastic waste",
+      "prompt": "Brainstorm 3 slogans about ditching single-use plastics."
+    },
+    {
+      "step": 3,
+      "branch": "Visual elements: Ocean pollution imagery",
+      "prompt": "Describe surreal AI image of plastic-choked whales morphing into protest signs."
+    },
+    {
+      "step": 4,
+      "branch": "Humor style: Absurd eco-fail memes",
+      "prompt": "Create a template for memes showing celebrities with plastic straws in noses."
+    }
+  ],
+  "reconstructed": "Forge viral AI-meme blitz for eco-activism—Gen Z plastic waste dread-humor storms"
+}
