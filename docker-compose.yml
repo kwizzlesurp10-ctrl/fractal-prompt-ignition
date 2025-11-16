@@ -1,0 +1,1 @@
+Stack backend (port 3000), Mongo (27017), Redis (6379), frontend (serve via Nginx).
