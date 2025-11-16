@@ -1,0 +1,7 @@
+graph TD
+    S[🌱 Seed: Craft viral AI-meme eco-campaign] --> R1[Step 1: Core msg + audience]
+    R1 --> R2[Step 2: Urgent plastic waste call]
+    R2 --> R3[Step 3: Ocean pollution visuals]
+    R3 --> R4[Step 4: Absurd eco-fail humor]
+    style S fill:#90EE90
+    style R4 fill:#FFD700
